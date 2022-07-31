@@ -2,6 +2,7 @@ from importlib import import_module
 from imagens import rock
 from imagens import paper
 from imagens import scissors
+import os
 
 fim_jogo = False
 while fim_jogo == False:
@@ -34,5 +35,10 @@ while fim_jogo == False:
         elif cpu == 1:
             print("Você ganhou!")
         else: print("Empatou!")
+    novamente = input("Tentar novamente? S o N: \n").lower()
+    if novamente == "n":
+        print("Ok, até uma próxima!")
+        fim_jogo = True
+    else: os.system("cls")
 
 
